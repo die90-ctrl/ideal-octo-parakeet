@@ -1,6 +1,6 @@
 import cv2 
 
-image = cv2.imread("C:/Users/AlogaPc008/Documents/api_exampl/img_test2.webp")
+image = cv2.imread("C:/Users/AlogaPc008/Documents/api_render/img_test2.webp")
 
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
