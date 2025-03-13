@@ -22,8 +22,14 @@
         <mxCell id="R4BwSNrIrO0T85q8sav3-2" value="Decodifica la URL recibida" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="278.75" y="260" width="187.5" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="R4BwSNrIrO0T85q8sav3-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="R4BwSNrIrO0T85q8sav3-4" target="R4BwSNrIrO0T85q8sav3-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="R4BwSNrIrO0T85q8sav3-4" value="Transforma la URL decodificada a un arreglo de numpy" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="263.75" y="370" width="217.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="R4BwSNrIrO0T85q8sav3-7" value="Aplica un filtro en escala de grises a la imagen original" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="262.5" y="470" width="220" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
