@@ -4,11 +4,26 @@
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="R4BwSNrIrO0T85q8sav3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="R4BwSNrIrO0T85q8sav3-0" target="R4BwSNrIrO0T85q8sav3-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="R4BwSNrIrO0T85q8sav3-0" value="Inicio" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="330" y="80" width="90" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="R4BwSNrIrO0T85q8sav3-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="R4BwSNrIrO0T85q8sav3-1" target="R4BwSNrIrO0T85q8sav3-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="R4BwSNrIrO0T85q8sav3-1" value="Recibe una URL de la&amp;nbsp;&lt;div&gt;API de Nest&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="280" y="160" width="185" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="R4BwSNrIrO0T85q8sav3-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="R4BwSNrIrO0T85q8sav3-2" target="R4BwSNrIrO0T85q8sav3-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R4BwSNrIrO0T85q8sav3-2" value="Decodifica la URL recibida" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="278.75" y="260" width="187.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="R4BwSNrIrO0T85q8sav3-4" value="Transforma la URL decodificada a un arreglo de numpy" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="263.75" y="370" width="217.5" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
