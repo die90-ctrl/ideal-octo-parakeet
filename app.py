@@ -1,10 +1,8 @@
-from flask import Flask, request, Response, jsonify, send_from_directory, abort
+from flask import Flask, request, jsonify
 import numpy as np
-from PIL import Image
 import requests
-from io import BytesIO
 import cv2
-import os
+import base64
 
 app = Flask(__name__)
 
@@ -13,22 +11,36 @@ def transform_image(url):
     
     img_array = np.array(bytearray(original_image.content), dtype=np.uint8)
     img = cv2.imdecode(img_array, cv2.IMREAD_GRAYSCALE)
-    img = cv2.resize(img,(500,500),3)
+    img = cv2.resize(img, (500, 500), interpolation=cv2.INTER_AREA)
+    
+    img_base64 = base64.b64encode(img).decode('utf-8')
+    # img_binary = img.tolist()
+    
+    response = {
+        "image": img_base64,
+        "message": "Image is BASE 64 encoded"
+    }
     
     if img is not None:
+        print(response)
         cv2.imshow('ImageWindow', img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
+        return response, 200
     else:
-        print("Failed to load image.")
+        return {"error": "Failed to load image."}, 400
 
-transform_image('https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg')
+transform_image('https://static8.depositphotos.com/1338574/829/i/950/depositphotos_8292994-stock-photo-the-letter-s-in-gold.jpg')
 
-# @app.route('/transform', methods=['POST'])
-# def image_result():
-#     data = request.get_json(force=True)
+@app.route('/transform', methods=['POST'])
+def image_result():
+    data = request.get_json(force=True)
     
-#     url = data['url']
+    url = data['url']
     
-#     return transform_image(url)
-# transform_image('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/1200px-Square_-_black_simple.svg.png')
+    modify_img = transform_image(url)
+    
+    return jsonify(modify_img), 200
+    
+if __name__ == '__main__':
+    app.run(debug=True)
